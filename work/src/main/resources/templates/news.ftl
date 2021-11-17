@@ -4,28 +4,28 @@
 	<meta charset="UTF-8">
 	<title>栓但头条</title>
 	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <body>
 	<div class="nav-bar">
 		<div class="nav navbar-default">
 			<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand hidden-xs" href="toutiao_website.html"></a>
-				<a class="navbar-brand hidden visible-xs mobile-logo" href="toutiao_website.html"></a>
+				<a class="navbar-brand hidden-xs" href="/webSite"></a>
+				<a class="navbar-brand hidden visible-xs mobile-logo" href="/webSite"></a>
 				<span><label for="menu" class="visible-xs">MENU</label> </span>
 			</div>
 				<div class="hidden-xs">
 				<ul class="nav navbar-nav">
-				<li class="active"><a href="toutiao_website.html" >首页</a></li>
+				<li class="active"><a href="/webSite" >首页</a></li>
 				<li><a href="">国际</a></li>
 				<li><a href="">国内</a></li>
 				<li><a href="">数读</a></li>
 				<li><a href="">社会</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-				<li><a href="login.html">登录</a></li>
-				<li><a href="register.html">注册</a></li>
+				<li><a href="/login">登录</a></li>
+				<li><a href="/register">注册</a></li>
 				</ul>
 				</div>
 		</div>
@@ -59,7 +59,7 @@
 			<div class="news-body">
 				<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, consequatur tempore facere atque molestias possimus alias quos recusandae hic odio, harum quae amet maiores itaque officiis, qui iste? Eligendi, aliquam.</div>
 				<div>Delectus voluptas atque quisquam optio saepe amet, rem facere sunt, veniam ex possimus pariatur ullam dolor. Quaerat delectus facilis accusamus! Facere praesentium, consequatur sapiente. Excepturi mollitia tenetur aliquam, velit asperiores.</div>
-				<img src="pic/2-2.jpg" alt="图片加载失败！">
+				<img src="../pic/2-2.jpg" alt="图片加载失败！">
 				<div>Eveniet delectus accusamus soluta quam laudantium rem ab aperiam, asperiores exercitationem minus, architecto possimus praesentium optio consequuntur in qui! Maiores qui et aperiam itaque ratione? Doloremque saepe magni, accusantium blanditiis!</div>
 				<div>Laudantium doloribus, commodi atque repellendus eaque. Magni provident, repellendus dicta rerum officia autem quia id qui quidem obcaecati, iste eveniet unde accusamus tenetur possimus, esse ipsa nihil quae ex sint?</div>
 				<div>Saepe, expedita, dolores. Atque mollitia et sit minima, architecto consequatur dolor earum accusantium reiciendis officia quia, quam fuga maiores excepturi recusandae voluptate, delectus facilis, odio eius. Quam veniam, sint id!</div>
@@ -76,32 +76,32 @@
 			<div class="side-bar-title side-bar-title-news">相关推荐</div>	
 			<div class="side-bar-body">
 				<div class="side-bar-item clearfix side-bar-item-news">
-					<div class="col-xs-5"><img src="pic/2-1.jpg" alt=""></div>
+					<div class="col-xs-5"><img src="../pic/2-1.jpg" alt=""></div>
 					<div class="col-xs-7"><a class="article-title" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
 					<div class="info">15k阅读-1k评论</div></div>
 				</div>
 				<div class="side-bar-item clearfix side-bar-item-news">
-					<div class="col-xs-5"><img src="pic/2-1.jpg" alt=""></div>
+					<div class="col-xs-5"><img src="../pic/2-1.jpg" alt=""></div>
 					<div class="col-xs-7"><a class="article-title" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
 					<div class="info">15k阅读-1k评论</div></div>
 				</div>
 				<div class="side-bar-item clearfix side-bar-item-news">
-					<div class="col-xs-5"><img src="pic/2-1.jpg" alt=""></div>
+					<div class="col-xs-5"><img src="../pic/2-1.jpg" alt=""></div>
 					<div class="col-xs-7"><a class="article-title" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
 					<div class="info">15k阅读-1k评论</div></div>
 				</div>
 				<div class="side-bar-item clearfix side-bar-item-news">
-					<div class="col-xs-5"><img src="pic/2-1.jpg" alt=""></div>
+					<div class="col-xs-5"><img src="../pic/2-1.jpg" alt=""></div>
 					<div class="col-xs-7"><a class="article-title" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
 					<div class="info">15k阅读-1k评论</div></div>
 				</div>
 				<div class="side-bar-item clearfix side-bar-item-news">
-					<div class="col-xs-5"><img src="pic/2-1.jpg" alt=""></div>
+					<div class="col-xs-5"><img src="../pic/2-1.jpg" alt=""></div>
 					<div class="col-xs-7"><a class="article-title" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
 					<div class="info">15k阅读-1k评论</div></div>
 				</div>
 				<div class="side-bar-item clearfix side-bar-item-news">
-					<div class="col-xs-5"><img src="pic/2-1.jpg" alt=""></div>
+					<div class="col-xs-5"><img src="../pic/2-1.jpg" alt=""></div>
 					<div class="col-xs-7"><a class="article-title" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
 					<div class="info">15k阅读-1k评论</div></div>
 				</div>
@@ -153,7 +153,6 @@
 		
 		</div>
 	</div>
-	<div class="footer">广播电视节目制作经营许可证：（沪）字第1248号 | 网络文化经营许可证：沪网文[2013]0480-056号 | 信息网络传播视听节目许可证：0910417 | 互联网ICP备案：沪ICP备13002172</div>
 	</div>
 </body>
 </html>
