@@ -47,8 +47,6 @@
 			</div>
 		</div>
 		<div class="col-sm-7 news-list">
-
-
 			<#list news as new>
 			<div class="news-list-item clearfix">
 				<div class="col-xs-5">
@@ -60,44 +58,8 @@
 				</div>
 			</div>
 			</#list>
-
-
-			<div class="news-list-item clearfix">
-				<div class="col-xs-5">
-					<img src="../pic/003.jpg">
-				</div>
-				<div class="col-xs-7">
-					<a class="title" href="/news">某路姓同学被美女老师潜规则，目前该同学情绪稳定。</a>
-					<span class="logo-sm" ><img src="../pic/logo.jpg"></span><span class="info">王花花</span>-<span class="info">25k阅读</span>-<span class="info">10分钟前发布</span>
-				</div>
-				</div><div class="news-list-item clearfix">
-				<div class="col-xs-5">
-					<img src="../pic/005.jpg">
-				</div>
-				<div class="col-xs-7">
-					<a class="title"  href="/news">范冰冰苦苦追求他仍得不到答复，惹怒李晨，放出豪言要</a>
-					<span class="logo-sm" ><img src="../pic/logo.jpg"></span><span class="info">王花花</span>-<span class="info">25k阅读</span>-<span class="info">10分钟前发布</span>
-				</div>
-				</div>
-				<div class="news-list-item clearfix">
-				<div class="col-xs-5">
-					<img src="../pic/002.jpg">
-				</div>
-				<div class="col-xs-7">
-					<a class="title" href="/news">十年前，他为了教育事业抛弃高圆圆，而今，高圆圆说，我有一句mmp如鲠在喉。</a>
-					<span class="logo-sm" ><img src="../pic/logo.jpg"></span><span class="info">王花花</span>-<span class="info">25k阅读</span>-<span class="info">10分钟前发布</span>
-				</div>
-				</div>
-				<div class="news-list-item clearfix">
-				<div class="col-xs-5">
-					<img src="../pic/002.jpg">
-				</div>
-				<div class="col-xs-7">
-					<a class="title" href="/news">十年前，他为了教育事业抛弃高圆圆，而今，高圆圆说，我有一句mmp如鲠在喉。</a>
-					<span class="logo-sm" ><img src="../pic/logo.jpg"></span><span class="info">王花花</span>-<span class="info">25k阅读</span>-<span class="info">10分钟前发布</span>
-				</div>
-				</div>
 		</div>
+
 		<div class="col-sm-3">
 			<input type="search" class="form-control" value="搜索新闻">
 			<div class="side-bar clearfix">
@@ -154,7 +116,6 @@
 		</div>
 		</div>
 	</div>
-	<div class="footer">广播电视节目制作经营许可证：（沪）字第1248号 | 网络文化经营许可证：沪网文[2013]0480-056号 | 信息网络传播视听节目许可证：0910417 | 互联网ICP备案：沪ICP备13002172</div>
 	</div>
 </body>
 </html>
