@@ -32,17 +32,17 @@
 		</div>
 	</div>
 	<div class="container container-small">
-		<h1>登录<div class="subheading">没有帐号？<a href="register.ftl">注册</a></div></h1>
+		<h1>登录<div class="subheading">没有帐号？<a href="/register">注册</a></div></h1>
 		<div class="form-group">
-		<label>用户名/账号/手机号：</label>
-		<input type="text" name="" class="form-control">
+		<label>用户名：</label>
+		<input type="text" name="" class="form-control" required id = "username">
 		</div>
 		<div class="form-group">
 		<label>密码：</label>
-		<input type="password" name="" class="form-control">
+		<input type="password" name="" class="form-control" required id = "password">
 		</div>
 		<div class="form-group">
-		<input type="submit" value="登录" class="btn btn-primary btn-block login-btn">
+		<input type="submit" value="登录" class="btn btn-primary btn-block login-btn" onclick="login()">
 		</div>
 		<div class="form-group">
 			<label><a href="#" id=forget>忘记密码？</a></label>
@@ -50,4 +50,30 @@
 	</div>
 	</div>
 </body>
+<script src="../js/jquery-1.12.3.min.js"></script>
+
+<script>
+
+	function login() {//传入表单参数
+		var username = $("#username").val();
+		var password = $("#password").val();
+		alert(username);
+		alert(password);
+		$.ajax({
+			url : "/login",
+			data : {"username":username,"password":password}, //提交表单数据
+			type : "post",
+			success : function(json){
+				console.log(json);
+				if(json.code == "0"){ //登录校验成功
+					//跳转url
+					window.location.href=json.redirect_url;
+				}else{
+					//显示错误信息
+					console.log(json.message);
+				}
+			}
+		})
+	}
+</script>
 </html>
