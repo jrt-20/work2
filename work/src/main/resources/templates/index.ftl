@@ -6,8 +6,8 @@
 		<title>bootstrap版评论</title>
 		<link href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="css/zyd.comment.css" rel="stylesheet" type="text/css">
-		<link href="css/wangEditor-fullscreen-plugin.css" rel="stylesheet" type="text/css">
+		<link href="../css/zyd.comment.css" rel="stylesheet" type="text/css">
+		<link href="../css/wangEditor-fullscreen-plugin.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
@@ -66,7 +66,7 @@
 							<div class="comment-body" id="comment-1">
 								<div class="cheader">
 									<a target="_blank" href="https://github.com/zhangyd-c">
-										<img class="userImage" src="img/user/11.jpg">
+										<img class="userImage" src="../img/user/11.jpg">
 										<strong>张三</strong>
 									</a>
 									<div class="timer">
@@ -89,7 +89,7 @@
 							<div class="comment-body" id="comment-2">
 								<div class="cheader">
 									<a target="_blank" href="https://github.com/zhangyd-c">
-										<img class="userImage" src="img/user/3.jpg">
+										<img class="userImage" src="../img/user/3.jpg">
 										<strong>李四</strong>
 									</a>
 									<div class="timer">
@@ -109,7 +109,7 @@
 							<div class="comment-body" id="comment-3">
 								<div class="cheader">
 									<a target="_blank" href="https://github.com/zhangyd-c">
-										<img class="userImage" src="img/user/5.jpg">
+										<img class="userImage" src="../img/user/5.jpg">
 										<strong>王二麻子</strong>
 									</a>
 									<div class="timer">
@@ -129,7 +129,7 @@
 							<div class="comment-body" id="comment-4">
 								<div class="cheader">
 									<a target="_blank" href="https://github.com/zhangyd-c">
-										<img class="userImage" src="img/user/6.jpg">
+										<img class="userImage" src="../img/user/6.jpg">
 										<strong>赵一</strong>
 									</a>
 									<div class="timer">
@@ -149,7 +149,7 @@
 							<div class="comment-body" id="comment-5">
 								<div class="cheader">
 									<a target="_blank" href="https://github.com/zhangyd-c">
-										<img class="userImage" src="img/user/7.jpg">
+										<img class="userImage" src="../img/user/7.jpg">
 										<strong>钱五</strong>
 									</a>
 									<div class="timer">
@@ -168,14 +168,19 @@
 					</ul>
 				</div>
 			</div>
+
+
+
+
+
 		</div>
 	</body>
-	<script src="js/wangEditor.min.js" type="text/javascript"></script>
-	<script src="js/jquery-1.12.3.min.js" type="text/javascript"></script>
+	<script src="../js/wangEditor.min.js" type="text/javascript"></script>
+	<script src="../js/jquery-1.12.3.min.js" type="text/javascript"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="js/xss.js" type="text/javascript"></script>
-	<script src="js/wangEditor-fullscreen-plugin.js" type="text/javascript"></script>
-	<script src="js/zyd.comment.js" type="text/javascript"></script>
+	<script src="../js/xss.js" type="text/javascript"></script>
+	<script src="../js/wangEditor-fullscreen-plugin.js" type="text/javascript"></script>
+	<script src="../js/zyd.comment.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		var E = window.wangEditor
 		var editor = new E('#editor')
