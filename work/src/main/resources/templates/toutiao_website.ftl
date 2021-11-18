@@ -47,20 +47,27 @@
 			</div>
 		</div>
 		<div class="col-sm-7 news-list">
-				<div class="news-list-item clearfix">
+
+
+			<#list news as new>
+			<div class="news-list-item clearfix">
 				<div class="col-xs-5">
-					<img src="../pic/002.jpg">
+					<img src="${new.image}">
 				</div>
 				<div class="col-xs-7">
-					<a class="title" href="news.ftl">十年前，他为了教育事业抛弃高圆圆，而今，高圆圆说，我有一句mmp如鲠在喉。 </a>
+					<a class="title" href="/news">${new.title}</a>
 					<span class="logo-sm" ><img src="../pic/logo.jpg"></span><span class="info">王花花</span>-<span class="info">25k阅读</span>-<span class="info">10分钟前发布</span>
 				</div>
-				</div><div class="news-list-item clearfix">
+			</div>
+			</#list>
+
+
+			<div class="news-list-item clearfix">
 				<div class="col-xs-5">
 					<img src="../pic/003.jpg">
 				</div>
 				<div class="col-xs-7">
-					<a class="title" href="news.ftl">某路姓同学被美女老师潜规则，目前该同学情绪稳定。</a>
+					<a class="title" href="/news">某路姓同学被美女老师潜规则，目前该同学情绪稳定。</a>
 					<span class="logo-sm" ><img src="../pic/logo.jpg"></span><span class="info">王花花</span>-<span class="info">25k阅读</span>-<span class="info">10分钟前发布</span>
 				</div>
 				</div><div class="news-list-item clearfix">
@@ -68,7 +75,7 @@
 					<img src="../pic/005.jpg">
 				</div>
 				<div class="col-xs-7">
-					<a class="title"  href="news.ftl">范冰冰苦苦追求他仍得不到答复，惹怒李晨，放出豪言要</a>
+					<a class="title"  href="/news">范冰冰苦苦追求他仍得不到答复，惹怒李晨，放出豪言要</a>
 					<span class="logo-sm" ><img src="../pic/logo.jpg"></span><span class="info">王花花</span>-<span class="info">25k阅读</span>-<span class="info">10分钟前发布</span>
 				</div>
 				</div>
@@ -77,7 +84,7 @@
 					<img src="../pic/002.jpg">
 				</div>
 				<div class="col-xs-7">
-					<a class="title" href="news.ftl">十年前，他为了教育事业抛弃高圆圆，而今，高圆圆说，我有一句mmp如鲠在喉。</a>
+					<a class="title" href="/news">十年前，他为了教育事业抛弃高圆圆，而今，高圆圆说，我有一句mmp如鲠在喉。</a>
 					<span class="logo-sm" ><img src="../pic/logo.jpg"></span><span class="info">王花花</span>-<span class="info">25k阅读</span>-<span class="info">10分钟前发布</span>
 				</div>
 				</div>
@@ -86,7 +93,7 @@
 					<img src="../pic/002.jpg">
 				</div>
 				<div class="col-xs-7">
-					<a class="title" href="news.ftl">十年前，他为了教育事业抛弃高圆圆，而今，高圆圆说，我有一句mmp如鲠在喉。</a>
+					<a class="title" href="/news">十年前，他为了教育事业抛弃高圆圆，而今，高圆圆说，我有一句mmp如鲠在喉。</a>
 					<span class="logo-sm" ><img src="../pic/logo.jpg"></span><span class="info">王花花</span>-<span class="info">25k阅读</span>-<span class="info">10分钟前发布</span>
 				</div>
 				</div>

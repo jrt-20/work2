@@ -272,4 +272,8 @@
       is_valid = #{isValid,jdbcType=SMALLINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="findAll" resultType="com.nosql.work.entity.News">
+    select * from news
+  </select>
 </mapper>
