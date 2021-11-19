@@ -178,4 +178,8 @@
       `password` = #{password,jdbcType=VARCHAR}
     where `uid` = #{uid,jdbcType=INTEGER}
   </update>
+
+  <select id="selectUserByName" resultType="com.nosql.work.entity.User">
+    select * from user WHERE username = #{username}
+  </select>
 </mapper>

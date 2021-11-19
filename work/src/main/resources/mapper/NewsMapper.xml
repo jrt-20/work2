@@ -276,4 +276,6 @@
   <select id="findAll" resultType="com.nosql.work.entity.News">
     select * from news
   </select>
+
+
 </mapper>

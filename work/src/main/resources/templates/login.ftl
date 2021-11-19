@@ -42,10 +42,11 @@
 		<input type="password" name="" class="form-control" required id = "password">
 		</div>
 		<div class="form-group">
-		<input type="submit" value="登录" class="btn btn-primary btn-block login-btn" onclick="login()">
+		<input type="button" value="登录" class="btn btn-primary btn-block login-btn" onclick="login()"/>
 		</div>
 		<div class="form-group">
 			<label><a href="#" id=forget>忘记密码？</a></label>
+			<label><span id='msg' style="color: #c2173c"></span></label>
 		</div>
 	</div>
 	</div>
@@ -57,23 +58,26 @@
 	function login() {//传入表单参数
 		var username = $("#username").val();
 		var password = $("#password").val();
-		alert(username);
-		alert(password);
 		$.ajax({
-			url : "/login",
+			url : "/Login",
 			data : {"username":username,"password":password}, //提交表单数据
 			type : "post",
+			dataType:"json",
 			success : function(json){
 				console.log(json);
-				if(json.code == "0"){ //登录校验成功
+				if(json.code == 0){ //登录校验成功
 					//跳转url
+					console.log(json.redirect_url);
 					window.location.href=json.redirect_url;
+					return false;
 				}else{
-					//显示错误信息
-					console.log(json.message);
+					//显示错误信息;
+					console.log(json.msg);
+					$("#msg").html(json.msg);
 				}
 			}
 		})
+
 	}
 </script>
 </html>
