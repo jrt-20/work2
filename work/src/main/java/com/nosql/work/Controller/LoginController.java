@@ -28,6 +28,13 @@ public class LoginController {
         return "login";
     }
 
+    /**
+     * 判断是否登陆成功
+     * @param username
+     * @param password
+     * @param request
+     * @return
+     */
     @RequestMapping("/Login")
     @ResponseBody
     public String isExist(String username, String password, HttpServletRequest request){
@@ -62,4 +69,32 @@ public class LoginController {
         String json = JSON.toJSONString(result);
         return json;
     }
+
+    /***
+     * 实现注销功能
+     * @return
+     */
+    @RequestMapping("/loginOut")
+    public String loginOut(HttpServletRequest request){
+        /**
+         * 将当前的会话彻底清除
+         */
+        request.getSession().invalidate();
+        return "login";//返回登录界面
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
