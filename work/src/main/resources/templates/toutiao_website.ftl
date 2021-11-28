@@ -17,7 +17,7 @@
 			</div>
 				<div class="hidden-xs">
 				<ul class="nav navbar-nav">
-				<li class="active"><a href="toutiao_website.ftl" >首页</a></li>
+				<li class="active"><a href="/webSite" >首页</a></li>
 				<li><a href="">国际</a></li>
 				<li><a href="">国内</a></li>
 				<li><a href="">数读</a></li>
@@ -63,10 +63,32 @@
 				</div>
 				<div class="col-xs-7">
 					<a class="title" href="/news">${new.title}</a>
-					<span class="logo-sm" ><img src="../pic/logo.jpg"></span><span class="info">王花花</span>-<span class="info">25k阅读</span>-<span class="info">10分钟前发布</span>
+					<span class="logo-sm" ><img src="../pic/logo.jpg"></span>
+					<span class="info">${new.author}</span>-<span class="info">${new.viewCount}次阅读</span>-<span class="info">${new.createdAt}</span>
+
 				</div>
 			</div>
 			</#list>
+
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+					<li>
+						<a href="#" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li><a href="/webSite/?pageNumber=1">1</a></li>
+					<li><a href="/webSite/?pageNumber=2">2</a></li>
+					<li><a href="/webSite/?pageNumber=3">3</a></li>
+					<li><a href="/webSite/?pageNumber=4">4</a></li>
+					<li><a href="/webSite/?pageNumber=5">5</a></li>
+					<li>
+						<a href="#" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
 
 		<div class="col-sm-3">

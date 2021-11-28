@@ -11,8 +11,8 @@
 		<div class="nav navbar-default">
 			<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand hidden-xs" href="toutiao_website.ftl"></a>
-				<a class="navbar-brand hidden visible-xs mobile-logo" href="toutiao_website.ftl"></a>
+				<a class="navbar-brand hidden-xs" href="/webSite"></a>
+				<a class="navbar-brand hidden visible-xs mobile-logo" href="/webSite"></a>
 				<span><label for="menu" class="visible-xs">MENU</label> </span>
 			</div>
 				<div class="hidden-xs">

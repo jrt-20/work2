@@ -1,6 +1,6 @@
 package com.nosql.work.Controller.mongo;
 
-import com.nosql.work.entity.mongo.Posts;
+import com.nosql.work.entity.mongo.Comments;
 import com.nosql.work.mongoDao.MongoTestDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,10 +14,10 @@ public class mongoTestController {
 
 
     @RequestMapping("/mongoTest")
-    public Posts findTestByName(){
-        Posts posts= mongoTestDao.findTestByName("first");
-        System.out.println(posts);
-        return posts;
+    public Comments findTestByName(){
+        Comments comments = mongoTestDao.findTestByName("first");
+        System.out.println(comments);
+        return comments;
     }
 
 }
