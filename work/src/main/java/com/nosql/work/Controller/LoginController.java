@@ -59,7 +59,7 @@ public class LoginController {
         if(flag ==true){
             result.put("msg","欢迎登陆"+username);
             result.put("code",0);//用来返回前台判断是否登陆成功，0代表成功，1代表失败
-            result.put("redirect_url","/webSite");
+            result.put("redirect_url","/webSite/1");
             HttpSession session = request.getSession();
             session.setAttribute("login_user",login_user);
         }else{
