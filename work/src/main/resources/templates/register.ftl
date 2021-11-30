@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html>/css/main.css">
+</head>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>登录</title>
 	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-</head>
+	<link rel="stylesheet" type="text/css" href="..
 <body>
 	<div class="nav-bar">
 		<div class="nav navbar-default">

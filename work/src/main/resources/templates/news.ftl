@@ -58,10 +58,12 @@
 	<div class="news">
 		<div class="container clearfix">
 		<div class="col-md-8">
+
 			<h1 class="news-title">十年前，他为了教育事业与高圆圆分手，而今，高圆圆说，我有一句mmp如鲠在喉。</h1>
 			<div class="news-status">15k阅读-15分钟前发布 <div class="label label-default">两性</div>
 			<div class="label label-default">情感</div></div>
 			<div class="news-body">
+
 				<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, consequatur tempore facere atque molestias possimus alias quos recusandae hic odio, harum quae amet maiores itaque officiis, qui iste? Eligendi, aliquam.</div>
 				<div>Delectus voluptas atque quisquam optio saepe amet, rem facere sunt, veniam ex possimus pariatur ullam dolor. Quaerat delectus facilis accusamus! Facere praesentium, consequatur sapiente. Excepturi mollitia tenetur aliquam, velit asperiores.</div>
 				<img src="../pic/2-2.jpg" alt="图片加载失败！">
