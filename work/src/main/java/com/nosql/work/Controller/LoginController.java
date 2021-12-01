@@ -3,6 +3,7 @@ package com.nosql.work.Controller;
 import com.alibaba.fastjson.JSON;
 import com.nosql.work.entity.User;
 import com.nosql.work.mapper.UserMapper;
+import com.nosql.work.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,7 +19,7 @@ import java.util.Map;
 public class LoginController {
 
     @Resource
-    private UserMapper userMapper;
+    private UserService userService;
 
     /**
      * 登录页面跳转
@@ -41,7 +42,7 @@ public class LoginController {
         Map<String ,Object> result = new HashMap<>();
         boolean flag = false;
 
-        List<User> lists = userMapper.selectUserByName(username);
+        List<User> lists = userService.selectUserByName(username);
 
         User login_user = null;//用来保存用户信息
         // 如果集合长度为0,说明不存在此用户

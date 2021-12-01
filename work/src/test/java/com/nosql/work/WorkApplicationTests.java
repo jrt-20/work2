@@ -109,9 +109,6 @@ class WorkApplicationTests {
      */
     @Test
     public void testContent() {
-        for (Content content:
-             contentService.findAll(1)) {
-            System.out.println(content);
-        }
+        System.out.println(contentService.findAll(1));
     }
 }
