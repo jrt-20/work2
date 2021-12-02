@@ -49,7 +49,7 @@ class WorkApplicationTests {
     @Test
     void contextLoads() {
         for (News obj: newsService.findAll()) {
-            System.out.println(obj.toString());
+            System.out.println(obj);
         }
 
     }

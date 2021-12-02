@@ -1,6 +1,7 @@
 package com.nosql.work.Controller;
 
 import com.nosql.work.entity.Content;
+import com.nosql.work.entity.News;
 import com.nosql.work.entity.mongo.Comments;
 import com.nosql.work.service.ContentService;
 import com.nosql.work.service.MongoCommentService;
@@ -23,6 +24,7 @@ public class IndexController {
 
     @Autowired
     private ContentService contentService;
+
 
     /**
      * 根据id跳转相关新闻页面并获取相关评论
@@ -62,6 +64,7 @@ public class IndexController {
         modelAndView.setViewName("news");
         return modelAndView;
     }
+
 
 
     @RequestMapping("/index")

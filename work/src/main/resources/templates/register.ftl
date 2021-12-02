@@ -48,7 +48,7 @@
 			<label><span id='msg' style="color: #c2173c"></span></label>
 		</div>
 		<div class="form-group">
-			<input type="button" value="登录" class="btn btn-primary btn-block login-btn" onclick="isSame()"/>
+			<input type="button" value="注册" class="btn btn-primary btn-block login-btn" onclick="isSame()"/>
 		</div>
 	</div>
 </body>

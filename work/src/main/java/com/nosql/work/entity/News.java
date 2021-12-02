@@ -1,5 +1,7 @@
 package com.nosql.work.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.sql.Date;
 
 public class News {
@@ -16,6 +18,7 @@ public class News {
     private String author;
     
     private Integer viewCount;
+
 
     private Date createdAt;
 
@@ -69,19 +72,20 @@ public class News {
         this.author = author;
     }
 
-    public Integer getviewCount() {
+    public Integer getViewCount() {
         return viewCount;
     }
 
-    public void setviewCount(Integer viewCount) {
+    public void setViewCount(Integer viewCount) {
         this.viewCount = viewCount;
     }
 
-    public Date getcreatedAt() {
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    public Date getCreatedAt() {
         return createdAt;
     }
 
-    public void setcreatedAt(Date createdAt) {
+    public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
