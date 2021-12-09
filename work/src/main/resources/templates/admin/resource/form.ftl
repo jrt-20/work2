@@ -12,10 +12,10 @@
     <meta name="description" content="">
 
     <link rel="shortcut icon" href="favicon.ico"> 
-    <link href="${ctx!}/assets/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="${ctx!}/assets/css/font-awesome.css?v=4.4.0" rel="stylesheet">
-    <link href="${ctx!}/assets/css/animate.css" rel="stylesheet">
-    <link href="${ctx!}/assets/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../assets/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../assets/css/animate.css" rel="stylesheet">
+    <link href="../../assets/css/style.css?v=4.1.0" rel="stylesheet">
 
 </head>
 
@@ -40,7 +40,7 @@
                         <h5>资源编辑</h5>
                     </div>
                     <div class="ibox-content">
-                        <form class="form-horizontal m-t" id="frm" method="post" action="${ctx!}/admin/resource/edit">
+                        <form class="form-horizontal m-t" id="frm" method="post" action="../../admin/resource/edit">
                         	<input type="hidden" id="id" name="id" value="${resource.id}">
                             <div class="form-group">
                                <label class="col-sm-3 control-label">上级资源：</label>
@@ -130,17 +130,17 @@
 
 
     <!-- 全局js -->
-    <script src="${ctx!}/assets/js/jquery.min.js?v=2.1.4"></script>
-    <script src="${ctx!}/assets/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../../assets/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../../assets/js/bootstrap.min.js?v=3.3.6"></script>
 
     <!-- 自定义js -->
-    <script src="${ctx!}/assets/js/content.js?v=1.0.0"></script>
+    <script src="../../assets/js/content.js?v=1.0.0"></script>
 
     <!-- jQuery Validation plugin javascript-->
-    <script src="${ctx!}/assets/js/plugins/validate/jquery.validate.min.js"></script>
-    <script src="${ctx!}/assets/js/plugins/validate/messages_zh.min.js"></script>
-    <script src="${ctx!}/assets/js/plugins/layer/layer.min.js"></script>
-    <script src="${ctx!}/assets/js/plugins/layer/laydate/laydate.js"></script>
+    <script src="../../assets/js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="../../assets/js/plugins/validate/messages_zh.min.js"></script>
+    <script src="../../assets/js/plugins/layer/layer.min.js"></script>
+    <script src="../../assets/js/plugins/layer/laydate/laydate.js"></script>
     <script type="text/javascript">
     $(document).ready(function () {
 	  	
@@ -186,7 +186,7 @@
     	    	$.ajax({
    	    		   type: "POST",
    	    		   dataType: "json",
-   	    		   url: "${ctx!}/admin/resource/edit",
+   	    		   url: "../../admin/resource/edit",
    	    		   data: $(form).serialize(),
    	    		   success: function(msg){
 	   	    			layer.msg(msg.message, {time: 2000},function(){

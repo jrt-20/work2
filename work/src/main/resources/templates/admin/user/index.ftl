@@ -69,6 +69,7 @@
 
     <!-- 自定义js -->
     <script src="../../assets/js/content.js?v=1.0.0"></script>
+    <script  src="https://lib.baomitu.com/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
 
     <!-- Page-Level Scripts -->
     <script>
@@ -94,6 +95,21 @@
                         "rows": result.data  //数据
                     }
                 },
+                onClickCell: function(field, value, row, $element) {
+                    $element.attr('contenteditable', true);
+                    $element.blur(function() {
+                        let index = $element.parent().data('index');
+                        let tdValue = $element.html();
+                        let id = row.id;
+                        let title = row.title;
+                        let content = row.content;
+                        let image = row.image;
+                        let type = row.types;
+                        let author = row.author;
+                        let view_count = row.viewCount;
+                        saveData(index, field, tdValue, id,title,content,image,type,author,view_count);
+                    });
+                },
 			    //数据列
 			    columns: [{
 			        title: "ID",
@@ -105,13 +121,6 @@
 			    },{
 			        title: "内容",
 			        field: "content",
-			        // formatter: function(value, row, index) {
-                    // 	var r = "";
-                    // 	$(value).each(function (index,role){
-                    // 		r = r + "【" + role.name + "】";
-                    // 	});
-                    // 	return r;
-                    // }
 			    },{
 			        title: "类别",
 			        field: "types"
@@ -127,45 +136,87 @@
 			    },{
 			        title: "创建时间",
 			        field: "createdAt",
+                    formatter: function (value, row, index) {
+                        return changeDateFormat(value)
+                    }
 			    },
-                {
-			        title: "是否删除",
-			        field: "isValid",
-			        // sortable: true
-			    }
+                // {
+			    //     title: "是否删除",
+			    //     field: "isValid",
+			    //     // sortable: true
+			    // }
 			    ]
 			});
         });
 
+        //日期时间戳转datetime
+        function changeDateFormat(cellval) {
+            var dateVal = cellval + "";
+            if (cellval != null) {
+                var date = new Date(parseInt(dateVal.replace("/Date(", "").replace(")/", ""), 10));
+                var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+                var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
 
-
-        
-        function edit(id){
-        	layer.open({
-        	      type: 2,
-        	      title: '用户修改',
-        	      shadeClose: true,
-        	      shade: false,
-        	      area: ['893px', '600px'],
-        	      content: '../../admin/user/edit/' + id,
-        	      end: function(index){
-        	    	  $('#table_list').bootstrapTable("refresh");
-       	    	  }
-        	    });
+                return date.getFullYear() + "-" + month + "-" + currentDate;
+            }
         }
+
+        function saveData(index, field, value,id,title,content,image,type,author,view_count) {
+            $("#table_list").bootstrapTable('updateCell', {
+                index: index,       //行索引
+                field: field,       //列名
+                value: value,        //cell值
+            })
+            console.log(id);
+            $.ajax({
+                url : "/admin/news/edit",
+                data : {"key":field,"value":value,"id":id
+                ,"title":title,"content":content,"image":image,"types":type,
+                "author":author,"viewCount":view_count,
+                }, //提交表单数据
+                type : "post",
+                dataType:"json",
+
+                success : function(json){
+                    if(json.code == 0){ //登录校验成功
+                        //成功
+                        swal({
+                            text: "信息已提交成功！",
+                            type: "success",
+                            confirmButtonColor: '#4cd964',
+                        });
+                        //跳转url
+                        return false;
+                    }else{
+                        //成功
+                        swal({
+                            text: "信息已提交成功！",
+                            type: "failed",
+                            confirmButtonColor: '#4cd964',
+                        });
+                        //显示错误信息;
+                        console.log(json.msg);
+                        console.log(data);
+                    }
+                }
+            })
+
+        }
+
         function add(){
         	layer.open({
         	      type: 2,
         	      title: '用户添加',
         	      shadeClose: true,
         	      shade: false,
-        	      area: ['893px', '600px'],
-        	      content: '../../admin/user/add',
+        	      area: ['893px', '500px'],
+        	      content: '/admin/news/add',
         	      end: function(index){
         	    	  $('#table_list').bootstrapTable("refresh");
        	    	  }
         	    });
         }
+
         function grant(id){
         	layer.open({
         	      type: 2,
