@@ -29,9 +29,9 @@ public class TestController {
      * 用户url
      * @return
      */
-    @RequestMapping("/admin/user/index")
+    @RequestMapping("/admin/news/index")
     public String adminUserIndex(){
-        return "/admin/user/index";
+        return "/admin/news/index";
     }
 
     @RequestMapping("/admin/role/index")
@@ -39,9 +39,6 @@ public class TestController {
         return "/admin/role/index";
     }
 
-    @RequestMapping("/admin/resource/index")
-    public String adminResourceIndex(){
-        return "/admin/resource/index";
-    }
+
 
 }

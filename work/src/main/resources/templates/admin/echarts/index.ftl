@@ -12,13 +12,13 @@
     <meta name="description" content="">
 
     <link rel="shortcut icon" href="favicon.ico"> 
-    <link href="${ctx!}/assets/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="${ctx!}/assets/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../../assets/css/font-awesome.css?v=4.4.0" rel="stylesheet">
 
-    <link href="${ctx!}/assets/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="../../assets/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
 
-    <link href="${ctx!}/assets/css/animate.css" rel="stylesheet">
-    <link href="${ctx!}/assets/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="../../assets/css/animate.css" rel="stylesheet">
+    <link href="../../assets/css/style.css?v=4.1.0" rel="stylesheet">
 
 </head>
 
@@ -32,9 +32,7 @@
                     </div>
                     <div class="ibox-content">
                         <p>
-                        	<@shiro.hasPermission name="system:resource:add">
-                        		<button class="btn btn-success " type="button" onclick="add();"><i class="fa fa-plus"></i>&nbsp;添加</button>
-                        	</@shiro.hasPermission>
+                            <button class="btn btn-success " type="button" onclick="add();"><i class="fa fa-plus"></i>&nbsp;添加</button>
                         </p>
                         <hr>
                         <div class="row row-lg">
@@ -55,22 +53,22 @@
     </div>
 
     <!-- 全局js -->
-    <script src="${ctx!}/assets/js/jquery.min.js?v=2.1.4"></script>
-    <script src="${ctx!}/assets/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../../assets/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../../assets/js/bootstrap.min.js?v=3.3.6"></script>
 
 
 	<!-- Bootstrap table -->
-    <script src="${ctx!}/assets/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
-    <script src="${ctx!}/assets/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
-    <script src="${ctx!}/assets/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../../assets/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="../../assets/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="../../assets/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
 
     <!-- Peity -->
-    <script src="${ctx!}/assets/js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="../../assets/js/plugins/peity/jquery.peity.min.js"></script>
 
-    <script src="${ctx!}/assets/js/plugins/layer/layer.min.js"></script>
+    <script src="../../assets/js/plugins/layer/layer.min.js"></script>
 
     <!-- 自定义js -->
-    <script src="${ctx!}/assets/js/content.js?v=1.0.0"></script>
+    <script src="../../assets/js/content.js?v=1.0.0"></script>
 
     <!-- Page-Level Scripts -->
     <script>
@@ -82,7 +80,7 @@
 			    //必须设置，不然request.getParameter获取不到请求参数
 			    contentType: "application/x-www-form-urlencoded",
 			    //获取数据的Servlet地址  
-			    url: "${ctx!}/admin/resource/list",
+			    url: "../../admin/resource/list",
 			    //表格显示条纹  
 			    striped: true,
 			    //启动分页  
@@ -183,7 +181,7 @@
         	      shadeClose: true,
         	      shade: false,
         	      area: ['893px', '600px'],
-        	      content: '${ctx!}/admin/resource/edit/' + id,
+        	      content: '../../admin/resource/edit/' + id,
         	      end: function(index){
         	    	  $('#table_list').bootstrapTable("refresh");
        	    	  }
@@ -196,7 +194,7 @@
         	      shadeClose: true,
         	      shade: false,
         	      area: ['893px', '600px'],
-        	      content: '${ctx!}/admin/resource/add',
+        	      content: '../../admin/resource/add',
         	      end: function(index){
         	    	  $('#table_list').bootstrapTable("refresh");
        	    	  }
@@ -207,7 +205,7 @@
         		$.ajax({
     	    		   type: "POST",
     	    		   dataType: "json",
-    	    		   url: "${ctx!}/admin/resource/delete/" + id,
+    	    		   url: "../../admin/resource/delete/" + id,
     	    		   success: function(msg){
 	 	   	    			layer.msg(msg.message, {time: 2000},function(){
 	 	   	    				$('#table_list').bootstrapTable("refresh");

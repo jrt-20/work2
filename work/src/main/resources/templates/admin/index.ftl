@@ -61,13 +61,13 @@
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                               <a class="J_menuItem" href="/admin/user/index">新闻管理</a>
+                               <a class="J_menuItem" href="/admin/news/index">新闻管理</a>
                             </li>
                             <li>
                                 <a class="J_menuItem" href="/admin/role/index">角色管理</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="/admin/resource/index">资源管理</a>
+                                <a class="J_menuItem" href="/admin/echarts/index">数据观星</a>
                             </li>
                         </ul>
                     </li>

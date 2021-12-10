@@ -33,7 +33,7 @@ public class AdminNewsController {
 
     @RequestMapping("/admin/news/add")
     public String add(){
-        return "/admin/user/form";
+        return "/admin/news/form";
     }
 
 }
