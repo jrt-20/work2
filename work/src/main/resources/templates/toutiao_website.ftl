@@ -11,14 +11,14 @@
 		<div class="nav navbar-default">
 			<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand hidden-xs" href="toutiao_website.ftl"></a>
-				<a class="navbar-brand hidden visible-xs mobile-logo" href="toutiao_website.ftl"></a>
+				<a class="navbar-brand hidden-xs" href="/webSite"></a>
+				<a class="navbar-brand hidden visible-xs mobile-logo" href="/webSite"></a>
 				<span><label for="menu" class="visible-xs">MENU</label> </span>
 			</div>
 				<div class="hidden-xs">
 				<ul class="nav navbar-nav">
 				<li class="active"><a href="/webSite" >首页</a></li>
-				<li><a href="">国际</a></li>
+				<li><a href="/guoji">国际</a></li>
 				<li><a href="">国内</a></li>
 				<li><a href="">数读</a></li>
 				<li><a href="">社会</a></li>

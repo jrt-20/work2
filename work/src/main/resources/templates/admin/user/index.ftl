@@ -206,7 +206,7 @@
         function add(){
         	layer.open({
         	      type: 2,
-        	      title: '用户添加',
+        	      title: '新闻添加',
         	      shadeClose: true,
         	      shade: false,
         	      area: ['893px', '500px'],
