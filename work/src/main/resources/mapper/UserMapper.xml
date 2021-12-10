@@ -182,4 +182,9 @@
   <select id="selectUserByName" resultType="com.nosql.work.entity.User">
     select * from user WHERE username = #{username}
   </select>
+
+  <select id="findAllUser" resultType="com.nosql.work.entity.User">
+    select * from user
+  </select>
+
 </mapper>

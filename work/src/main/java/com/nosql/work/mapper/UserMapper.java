@@ -35,6 +35,6 @@ public interface UserMapper {
      */
     List<User> selectUserByName(String username);
 
-
+    List<User> findAllUser();
 
 }
