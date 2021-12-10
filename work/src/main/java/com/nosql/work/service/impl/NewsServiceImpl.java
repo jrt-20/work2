@@ -27,4 +27,9 @@ public class NewsServiceImpl implements NewsService {
         newsMapper.insert(news);
     }
 
+    @Override
+    public void delete(int id) {
+        newsMapper.deleteByPrimaryKey(id);
+    }
+
 }

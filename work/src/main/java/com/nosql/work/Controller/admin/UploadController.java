@@ -14,6 +14,8 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.annotation.Resource;
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
+
 
 @Controller
 public class UploadController {
@@ -31,6 +33,15 @@ public class UploadController {
     @PostMapping("/Upload")
     @ResponseBody
     public String upload(@RequestParam("file") MultipartFile file, News news) {
+        // 封装news，添加剩余字段
+        long datetime  = new Date().getTime();
+
+        java.sql.Date  sqlDate = new java.sql.Date(datetime);
+
+        news.setCreatedAt(sqlDate);
+        news.setImage("/pic/008.png");
+        news.setContent("新闻内容");
+        news.setViewCount(0);
 
         newsService.insert(news);
         if (file.isEmpty()) {

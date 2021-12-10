@@ -70,6 +70,7 @@
     <!-- 自定义js -->
     <script src="../../assets/js/content.js?v=1.0.0"></script>
     <script  src="https://lib.baomitu.com/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
+    <script src="../../assets/js/bootbox.all.min.js"></script>
 
     <!-- Page-Level Scripts -->
     <script>
@@ -140,14 +141,63 @@
                         return changeDateFormat(value)
                     }
 			    },
-                // {
-			    //     title: "是否删除",
-			    //     field: "isValid",
-			    //     // sortable: true
-			    // }
+                {
+                    field: 'del',
+                    title: '操作',
+                    width: 100,
+                    align: 'center',
+                    valign: 'middle',
+                    events:delEvents,
+                    formatter:delFunction
+                }
 			    ]
-			});
+			}
+			);
         });
+
+        function delFunction(value,row,index){
+            return [
+                '<button type="button" class="btn btn-primary" id="del_btn">删除</button>'
+            ].join('');
+        }
+
+        //删除事件
+        window.delEvents ={
+            "click #del_btn":function(e,value,row,index)
+            {
+                console.log(row);
+                bootbox.confirm({
+                    size: "small",
+                    message: "您确定删除"+row.id+"行吗？",
+                    buttons: {
+                        confirm: {
+                            label: '是',
+                            className: 'btn-success'
+                        },
+                        cancel: {
+                            label: '否',
+                            className: 'btn-danger'
+                        }
+                    },
+                    callback: function(result) {
+                        if(result) {
+                            $.ajax({
+                                method:"post",
+                                url:'/admin/news/delete/',
+                                data:{
+                                    id:row.id,
+                                },
+                                async:true,
+                                success:function (res) {
+                                    $("#table_list").bootstrapTable('refresh');
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        }
+
 
         //日期时间戳转datetime
         function changeDateFormat(cellval) {
@@ -230,6 +280,7 @@
        	    	  }
         	    });
         }
+
         function del(id){
         	layer.confirm('确定删除吗?', {icon: 3, title:'提示'}, function(index){
         		$.ajax({

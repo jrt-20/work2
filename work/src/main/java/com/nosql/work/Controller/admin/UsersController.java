@@ -1,4 +1,4 @@
-package com.nosql.work.Controller;
+package com.nosql.work.Controller.admin;
 
 import com.alibaba.fastjson.JSON;
 import com.nosql.work.entity.News;
@@ -30,5 +30,14 @@ public class UsersController {
         result.put("total",userList.size());
 
         return JSON.toJSONString(result);
+    }
+
+    /**
+     * 跳转用户添加页面
+     * @return
+     */
+    @RequestMapping("/admin/user/add")
+    public String userAdd(){
+        return "/admin/role/form";
     }
 }
