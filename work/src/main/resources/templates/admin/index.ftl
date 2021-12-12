@@ -67,7 +67,7 @@
                                 <a class="J_menuItem" href="/admin/role/index">角色管理</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="/admin/echarts/index">数据观星</a>
+                                <a class="J_menuItem" href="/admin/echarts/data">数据观星</a>
                             </li>
                         </ul>
                     </li>

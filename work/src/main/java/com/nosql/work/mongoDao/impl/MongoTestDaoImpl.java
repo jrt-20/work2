@@ -50,8 +50,6 @@ public class MongoTestDaoImpl implements MongoTestDao {
         Update update= new Update().set("title", test.getTitle()).set("content", test.getTitle());
         //更新查询返回结果集的第一条
         mongoTemplate.updateFirst(query,update, Comments.class);
-        //更新查询返回结果集的所有
-        // mongoTemplate.updateMulti(query,update,TestEntity.class);
     }
 
     /**

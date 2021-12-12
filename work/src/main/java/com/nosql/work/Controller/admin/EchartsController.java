@@ -16,4 +16,11 @@ public class EchartsController {
         return "/admin/echarts/index";
     }
 
+    @RequestMapping("/admin/echarts/data")
+    public String data(){
+        return "/admin/echarts/data";
+    }
+
+
+
 }
